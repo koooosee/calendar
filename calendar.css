@@ -48,6 +48,8 @@ body{
     margin-top: 300px;
 }
 h1{
+    padding: 25px 100px;
+    margin: 0;
     position: absolute;
     top: 75px;
     left: 50%;
