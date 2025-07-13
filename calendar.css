@@ -47,3 +47,9 @@ body{
 #calendar{
     margin-top: 200px;
 }
+h1{
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
