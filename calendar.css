@@ -13,6 +13,7 @@
     border-bottom: 1px #777777 dashed;
     width: 100px;
     height: 100px;
+    background-color: #ffffff;
 }
 .dayText{
     padding: 0;
@@ -20,6 +21,7 @@
     border-top: 1px #777777 dashed;
     width: 100px;
     height: 20px;
+    background-color: #ffffff;
 }
 .imageData{
     padding: 0;
