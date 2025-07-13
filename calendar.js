@@ -50,7 +50,7 @@ for(let i = 0; i < weekNum; i++){
     calendar.appendChild(weekText);
 }
 
-fetch("./datas/" + year + "-" + (month + 1) + ".txt").then((res) => {
+/*fetch("./datas/" + year + "-" + (month + 1) + ".txt").then((res) => {
     return res.text()
 }).then((resText) => {
     let dataList = resText?.split("\n");
@@ -58,4 +58,4 @@ fetch("./datas/" + year + "-" + (month + 1) + ".txt").then((res) => {
         imageData[i].setAttribute("src", "./images/" + dataList[i * 2]);
         dayText[i].innerText = dataList[i * 2 + 1];
     }
-});
+});*/
