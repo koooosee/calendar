@@ -7,7 +7,7 @@ let lastDay;
 let dayNum = 1 - startDay;
 let calendar = document.getElementById("calendar");
 let title = document.getElementById("title");
-title.innerText = month + "月　カレンダー";
+title.innerText = (month + 1) + "月　カレンダー";
 
 if(month == 0 || month == 2 || month == 4 || month == 6 || month == 7 || month == 9 || month == 11){
     lastDay = 31;
