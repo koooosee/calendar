@@ -53,13 +53,13 @@ fetch("./datas/" + year + "-" + (month + 1) + ".txt").then((res) => {
 }).then((resText) => {
     let dataList = resText.split("\n");
     for(let i = 0; i < weekNum * 7; i++){
-        if(dataList[i * 2] != ""){
+        /*if(dataList[i * 2] != ""){
             imageData[i] = document.createElement("img");
             imageData[i].setAttribute("alt", "");
             imageData[i].setAttribute("class", "imageData");
             imageData[i].setAttribute("src", "./images/" + dataList[i * 2]);
             dayImage[i].appendChild(imageData[i]);
-        }
+        }*/
         dayText[i].innerText = dataList[i * 2 + 1];
     }
 });
