@@ -60,6 +60,7 @@ fetch("./datas/" + year + "-" + (month + 1) + ".txt").then((res) => {
             imageData[i].setAttribute("src", "./images/" + dataList[i * 2]);
             dayImage[i].appendChild(imageData[i]);
         }
+        document.writeln("s" + dataList[2] + "s");
         dayText[i].innerText = dataList[i * 2 + 1];
     }
 });
