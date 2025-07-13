@@ -53,6 +53,18 @@ h1{
     position: absolute;
     top: 75px;
     left: 50%;
+    width: auto;
+    height: auto;
     transform: translate(-50%, 0);
     background-image: url("./title.png");
+    color: #584d34;
+    text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff,
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000,
 }
