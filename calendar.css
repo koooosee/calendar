@@ -45,11 +45,12 @@ body{
     font-family: sans-serif;
 }
 #calendar{
-    margin-top: 200px;
+    margin-top: 300px;
 }
 h1{
     position: absolute;
     top: 75px;
     left: 50%;
     transform: translate(-50%, 0);
+    background-image: url("./title.png");
 }
