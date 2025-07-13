@@ -39,6 +39,6 @@
 body{
     background-image: url("./back.png");
 }
-.calendar{
+#calendar{
     margin-top: 200px;
 }
