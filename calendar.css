@@ -40,5 +40,5 @@ body{
     background-image: url("./back.png");
 }
 .calendar{
-    position: relative;
+    margin-top: 200px;
 }
