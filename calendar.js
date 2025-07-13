@@ -56,6 +56,6 @@ fetch("./datas/" + year + "-" + (month + 1) + ".txt").then((res) => {
     let dataList = resText?.split("\n");
     for(let i = 0; i < weekNum * 7; i++){
         imageData[i].setAttribute("src", "./images/" + dataList[i * 2]);
-        dayText[i].innerText = "test";/*dataList[i * 2 + 1];*/
+        dayText[i].innerText = dataList[i * 2 + 1];
     }
 });
