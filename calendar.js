@@ -22,31 +22,29 @@ if(month == 0 || month == 2 || month == 4 || month == 6 || month == 7 || month =
 let weekNum = Math.ceil((startDay + lastDay) / 7);
 let dayText = new Array(weekNum * 7);
 let imageData = new Array(weekNum * 7);
+let dayImage = new Array(weekNum * 7);
+let weekImage = new Array(weekNum);
 
 for(let i = 0; i < weekNum; i++){
-    let weekImage = document.createElement("tr");
-    weekImage.setAttribute("class", "weekImage");
+    weekImage[i] = document.createElement("tr");
+    weekImage[i].setAttribute("class", "weekImage");
     let weekText = document.createElement("tr");
     weekText.setAttribute("class", "weekText");
     for(let j = 0; j < 7; j++){
-        let dayImage = document.createElement("td");
-        dayImage.setAttribute("align", "left");
-        dayImage.setAttribute("valign", "top");
-        dayImage.setAttribute("class", "dayImage");
+        dayImage[i * 7 + j] = document.createElement("td");
+        dayImage[i * 7 + j].setAttribute("align", "left");
+        dayImage[i * 7 + j].setAttribute("valign", "top");
+        dayImage[i * 7 + j].setAttribute("class", "dayImage");
         if(dayNum > 0 && dayNum <= lastDay){
-            dayImage.innerText = dayNum;
+            dayImage[i * 7 + j].innerText = dayNum;
         }
-        imageData[i * 7 + j] = document.createElement("img");
-        imageData[i * 7 + j].setAttribute("alt", "");
-        imageData[i * 7 + j].setAttribute("class", "imageData");
-        dayImage.appendChild(imageData[i * 7 + j]);
-        weekImage.appendChild(dayImage);
+        weekImage[i].appendChild(dayImage[i * 7 + j]);
         dayNum = dayNum + 1;
         dayText[i * 7 + j] = document.createElement("td");
         dayText[i * 7 + j].setAttribute("class", "dayText");
         weekText.appendChild(dayText[i * 7 + j]);
     }
-    calendar.appendChild(weekImage);
+    calendar.appendChild(weekImage[i]);
     calendar.appendChild(weekText);
 }
 
@@ -55,7 +53,13 @@ fetch("./datas/" + year + "-" + (month + 1) + ".txt").then((res) => {
 }).then((resText) => {
     let dataList = resText.split("\n");
     for(let i = 0; i < weekNum * 7; i++){
-        imageData[i].setAttribute("src", "./images/" + dataList[i * 2]);
+        if(dataList[i * 2] != ""){
+            imageData[i] = document.createElement("img");
+            imageData[i].setAttribute("alt", "");
+            imageData[i].setAttribute("class", "imageData");
+            imageData[i].setAttribute("src", "./images/" + dataList[i * 2]);
+            dayImage[i].appendChild(imageData[i]);
+        }
         dayText[i].innerText = dataList[i * 2 + 1];
     }
 });
