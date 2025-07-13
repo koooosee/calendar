@@ -35,3 +35,6 @@
     border-style: hidden;
     transform: translate(50%, 0%);
 }
+img:not([src]){
+    display: none;
+}
