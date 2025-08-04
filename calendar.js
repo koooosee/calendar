@@ -38,7 +38,10 @@ for(let i = 0; i < weekNum; i++){
         dayImage[i * 7 + j].setAttribute("valign", "top");
         dayImage[i * 7 + j].setAttribute("class", "dayImage");
         if(dayNum > 0 && dayNum <= lastDay){
-            dayImage[i * 7 + j].innerText = dayNum;
+            let date = document.createElement("p");
+            date.setAttribute("class", "date");
+            date.innerText = dayNum;
+            dayImage[i * 7 + j].appendChild(date);
         }
         weekImage[i].appendChild(dayImage[i * 7 + j]);
         dayNum = dayNum + 1;
@@ -65,3 +68,4 @@ fetch("./datas/" + year + "-" + (month + 1) + ".txt").then((res) => {
         dayText[i].innerText = dataList[i * 2 + 1];
     }
 });
+
