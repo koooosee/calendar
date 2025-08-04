@@ -14,7 +14,6 @@
     width: 100px;
     height: 100px;
     background-color: #ffffff;
-    z-index: 20;
     font-family: sans-serif;
 }
 .dayText{
@@ -41,6 +40,12 @@
     transform: translate(-50%, -50%);
     z-index: 10;
 }
+.date{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    z-index: 20;
+}
 body{
     background-image: url("./back.png");
     font-family: sans-serif;
@@ -64,3 +69,4 @@ h1{
         2px 2px 2px #ffffff,
         -2px -2px 2px #ffffff;
 }
+
