@@ -52,7 +52,6 @@
         -2px -2px 2px #ffffff;
 }
 body{
-    background-image: url("./back.png");
     font-family: sans-serif;
 }
 #calendar{
@@ -74,6 +73,7 @@ h1{
         2px 2px 2px #ffffff,
         -2px -2px 2px #ffffff;
 }
+
 
 
 
