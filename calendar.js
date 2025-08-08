@@ -7,7 +7,9 @@ let lastDay;
 let dayNum = 1 - startDay;
 let calendar = document.getElementById("calendar");
 let title = document.getElementById("title");
+let body = document.getElementById("body");
 title.innerText = (month + 1) + "月　カレンダー";
+body.setAttribute("background", "./backs/back-" + year + "-" + month + ".png"
 
 if(month == 0 || month == 2 || month == 4 || month == 6 || month == 7 || month == 9 || month == 11){
     lastDay = 31;
@@ -68,4 +70,5 @@ fetch("./datas/" + year + "-" + (month + 1) + ".txt").then((res) => {
         dayText[i].innerText = dataList[i * 2 + 1];
     }
 });
+
 
